@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الكورس - برمجة تطبيقات الويب</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/courses.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">🎓 أكاديمية العلم والمعرفة</a>
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-right"></i>
+                العودة للرئيسية
+            </a>
+        </nav>
+    </header>
+
+    <section class="course-hero">
+        <div class="container">
+            <div class="course-hero-content">
+                <div class="course-icon">💻</div>
+                <h1>برمجة تطبيقات الويب</h1>
+                <p>تعلم تطوير تطبيقات الويب الحديثة من الصفر باستخدام أحدث التقنيات والأدوات البرمجية مع خبراء المجال
+                </p>
+
+                <div class="course-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>12 أسبوع</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-video"></i>
+                        <span>24 درس</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-users"></i>
+                        <span>89 طالب</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-star"></i>
+                        <span>4.8 تقييم</span>
+                    </div>
+                </div>
+
+                <a href="#" class="enroll-button">
+                    🚀 ابدأ التعلم الآن
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="course-content">
+                    <!-- Video Section -->
+                    <!-- قسم الفيديو -->
+                    <div class="section video-section fade-in">
+                        <div class="video-player" id="videoContainer" onclick="playVideo()">
+                            <!-- زر التشغيل -->
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <!-- هنا يتم حقن الفيديو -->
+                            <div id="videoFrame"></div>
+                        </div>
+                    </div>
+
+                    <!-- Course Description -->
+                    <div class="section fade-in fade-in-delay-1">
+                        <h2><i class="fas fa-info-circle"></i> نظرة عامة على الكورس</h2>
+                        <p>هذا الكورس مصمم خصيصاً لمن يريد تعلم برمجة تطبيقات الويب من الصفر حتى الاحتراف. ستتعلم كيفية
+                            بناء مواقع ويب تفاعلية وحديثة باستخدام أحدث التقنيات مثل HTML5, CSS3, JavaScript, React,
+                            Node.js وقواعد البيانات.</p>
+                        <p>سيتم التركيز على الجانب العملي من خلال مشاريع حقيقية تضيفها إلى معرض أعمالك. ستحصل على دعم
+                            مستمر من المدرب وزملائك في الكورس.</p>
+                    </div>
+
+                    <!-- What You'll Learn -->
+                    <div class="section fade-in fade-in-delay-2">
+                        <h2><i class="fas fa-graduation-cap"></i> ما ستتعلمه</h2>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check-circle"></i> أساسيات HTML5 و CSS3 المتقدمة</li>
+                            <li><i class="fas fa-check-circle"></i> برمجة JavaScript الحديثة و ES6+</li>
+                            <li><i class="fas fa-check-circle"></i> إنشاء تطبيقات تفاعلية باستخدام React</li>
+                            <li><i class="fas fa-check-circle"></i> تطوير خدمات الخلفية بـ Node.js</li>
+                            <li><i class="fas fa-check-circle"></i> التعامل مع قواعد البيانات</li>
+                            <li><i class="fas fa-check-circle"></i> أفضل الممارسات في البرمجة</li>
+                            <li><i class="fas fa-check-circle"></i> نشر التطبيقات على الإنترنت</li>
+                            <li><i class="fas fa-check-circle"></i> بناء معرض أعمال قوي</li>
+                        </ul>
+                    </div>
+
+                    <!-- Curriculum -->
+                    <div class="section fade-in fade-in-delay-3">
+                        <h2><i class="fas fa-list-ul"></i> محتوى الكورس</h2>
+                        <div class="curriculum-list">
+                            <div class="curriculum-item">
+                                <div class="curriculum-header" onclick="toggleCurriculum(this)">
+                                    <h3><i class="fas fa-play-circle"></i> الوحدة الأولى: مقدمة وأساسيات HTML</h3>
+                                    <i class="fas fa-chevron-down curriculum-toggle"></i>
+                                </div>
+                                <div class="curriculum-content">
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">مقدمة عن تطوير الويب</div>
+                                            <div class="lesson-duration">15 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">إعداد بيئة التطوير</div>
+                                            <div class="lesson-duration">20 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">أساسيات HTML5</div>
+                                            <div class="lesson-duration">30 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-file-alt lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">تطبيق عملي: بناء أول صفحة</div>
+                                            <div class="lesson-duration">25 دقيقة</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="curriculum-item">
+                                <div class="curriculum-header" onclick="toggleCurriculum(this)">
+                                    <h3><i class="fas fa-play-circle"></i> الوحدة الثانية: التصميم باستخدام CSS</h3>
+                                    <i class="fas fa-chevron-down curriculum-toggle"></i>
+                                </div>
+                                <div class="curriculum-content">
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">مقدمة عن CSS3</div>
+                                            <div class="lesson-duration">18 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">Flexbox و Grid Layout</div>
+                                            <div class="lesson-duration">35 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">التصميم المتجاوب</div>
+                                            <div class="lesson-duration">28 دقيقة</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="curriculum-item">
+                                <div class="curriculum-header" onclick="toggleCurriculum(this)">
+                                    <h3><i class="fas fa-play-circle"></i> الوحدة الثالثة: JavaScript الأساسي</h3>
+                                    <i class="fas fa-chevron-down curriculum-toggle"></i>
+                                </div>
+                                <div class="curriculum-content">
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">أساسيات JavaScript</div>
+                                            <div class="lesson-duration">22 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">التعامل مع DOM</div>
+                                            <div class="lesson-duration">32 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">الأحداث والتفاعل</div>
+                                            <div class="lesson-duration">26 دقيقة</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="curriculum-item">
+                                <div class="curriculum-header" onclick="toggleCurriculum(this)">
+                                    <h3><i class="fas fa-play-circle"></i> الوحدة الرابعة: React للمبتدئين</h3>
+                                    <i class="fas fa-chevron-down curriculum-toggle"></i>
+                                </div>
+                                <div class="curriculum-content">
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">مقدمة عن React</div>
+                                            <div class="lesson-duration">25 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">Components و Props</div>
+                                            <div class="lesson-duration">40 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">State و Event Handling</div>
+                                            <div class="lesson-duration">35 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-file-alt lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">مشروع عملي: تطبيق Todo List</div>
+                                            <div class="lesson-duration">50 دقيقة</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="curriculum-item">
+                                <div class="curriculum-header" onclick="toggleCurriculum(this)">
+                                    <h3><i class="fas fa-play-circle"></i> الوحدة الخامسة: Node.js و Express</h3>
+                                    <i class="fas fa-chevron-down curriculum-toggle"></i>
+                                </div>
+                                <div class="curriculum-content">
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">مقدمة عن Node.js</div>
+                                            <div class="lesson-duration">20 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">إنشاء API باستخدام Express</div>
+                                            <div class="lesson-duration">45 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-video lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">التعامل مع قواعد البيانات</div>
+                                            <div class="lesson-duration">38 دقيقة</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="curriculum-item">
+                                <div class="curriculum-header" onclick="toggleCurriculum(this)">
+                                    <h3><i class="fas fa-play-circle"></i> الوحدة السادسة: المشروع النهائي</h3>
+                                    <i class="fas fa-chevron-down curriculum-toggle"></i>
+                                </div>
+                                <div class="curriculum-content">
+                                    <div class="lesson-item">
+                                        <i class="fas fa-project-diagram lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">تخطيط المشروع النهائي</div>
+                                            <div class="lesson-duration">30 دقيقة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-code lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">بناء تطبيق متجر إلكتروني</div>
+                                            <div class="lesson-duration">2 ساعة</div>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <i class="fas fa-cloud lesson-icon"></i>
+                                        <div class="lesson-info">
+                                            <div class="lesson-title">نشر التطبيق</div>
+                                            <div class="lesson-duration">25 دقيقة</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prerequisites -->
+                    <div class="section fade-in">
+                        <h2><i class="fas fa-clipboard-check"></i> المتطلبات المسبقة</h2>
+                        <ul class="course-features">
+                            <li><i class="fas fa-laptop"></i> جهاز كمبيوتر أو لابتوب</li>
+                            <li><i class="fas fa-wifi"></i> اتصال إنترنت مستقر</li>
+                            <li><i class="fas fa-brain"></i> رغبة في التعلم والممارسة</li>
+                            <li><i class="fas fa-clock"></i> تخصيص 10-15 ساعة أسبوعياً</li>
+                        </ul>
+                        <p>لا يتطلب هذا الكورس أي خبرة سابقة في البرمجة. سنبدأ من الصفر ونتدرج معك خطوة بخطوة.</p>
+                    </div>
+
+                    <!-- Reviews -->
+                    <div class="section fade-in">
+                        <h2><i class="fas fa-star"></i> تقييمات الطلاب</h2>
+                        <div class="reviews-container">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">أ</div>
+                                        <div>
+                                            <div class="reviewer-name">أحمد محمد</div>
+                                            <div class="review-date">منذ أسبوع</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="review-text">كورس رائع جداً! الشرح واضح والمشاريع العملية ساعدتني كثيراً في
+                                    فهم المفاهيم.</p>
+                            </div>
+
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">ف</div>
+                                        <div>
+                                            <div class="reviewer-name">فاطمة علي</div>
+                                            <div class="review-date">منذ أسبوعين</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="review-text">المدرب محترف والدعم المستمر ممتاز. أنصح بهذا الكورس لكل من يريد
+                                    تعلم تطوير الويب.</p>
+                            </div>
+
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar">م</div>
+                                        <div>
+                                            <div class="reviewer-name">محمد سالم</div>
+                                            <div class="review-date">منذ 3 أسابيع</div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="review-text">كورس شامل ومفيد. حصلت على وظيفة كمطور ويب بعد إنهاء الكورس بشهر!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-card">
+                        <div class="price-section">
+                            <div class="price">299 ر.س</div>
+                            <div class="price-note">سعر لفترة محدودة</div>
+                        </div>
+
+                        <ul class="course-features">
+                            <li><i class="fas fa-infinity"></i> وصول مدى الحياة</li>
+                            <li><i class="fas fa-mobile-alt"></i> متاح على الهاتف والكمبيوتر</li>
+                            <li><i class="fas fa-certificate"></i> شهادة إتمام</li>
+                            <li><i class="fas fa-headset"></i> دعم فني مستمر</li>
+                            <li><i class="fas fa-users"></i> مجتمع الطلاب</li>
+                            <li><i class="fas fa-download"></i> مواد قابلة للتحميل</li>
+                        </ul>
+
+                        <a href="#" class="enroll-button"
+                            style="width: 100%; display: block; text-align: center; margin-bottom: 1rem;">
+                            🚀 ابدأ التعلم الآن
+                        </a>
+
+                        <div class="skills-section">
+                            <h3>المهارات التي ستكتسبها</h3>
+                            <div class="skills-container">
+                                <div class="skill-pill">HTML5</div>
+                                <div class="skill-pill">CSS3</div>
+                                <div class="skill-pill">JavaScript</div>
+                                <div class="skill-pill">React</div>
+                                <div class="skill-pill">Node.js</div>
+                                <div class="skill-pill">Express</div>
+                                <div class="skill-pill">MongoDB</div>
+                                <div class="skill-pill">REST API</div>
+                            </div>
+                        </div>
+
+                        <div class="progress-section">
+                            <h3>إحصائيات التقدم</h3>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span>معدل الإنجاز</span>
+                                <span id="progressText">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="instructor-card">
+                        <div class="instructor-avatar">د.م</div>
+                        <div class="instructor-name">د. محمد أحمد</div>
+                        <div class="instructor-title">مطور ويب متخصص</div>
+                        <div class="instructor-bio">
+                            خبرة 8 سنوات في تطوير الويب. عمل في شركات تقنية رائدة ودرب أكثر من 2000 طالب.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section ">
+                    <h3>عن الأكاديمية</h3>
+                    <p>مؤسسة تعليمية رائدة تهدف لتقديم تجربة تعليمية تفاعلية ومميزة تواكب تطورات العصر الرقمي.</p>
+                </div>
+                <div class="footer-section links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#hero">الرئيسية</a></li>
+                        <li><a href="#courses">الكورسات</a></li>
+                        <li><a href="#teachers">المعلمين</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section social">
+                    <h3>تابعنا</h3>
+                    <div class="footer-social">
+                        <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="انستجرام"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 أكاديمية العلم والمعرفة. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+<script>
+    // Video player functionality
+function playVideo() {
+    const videoContainer = document.getElementById("videoContainer");
+    videoContainer.innerHTML = `
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/UB1O30fR-EE?autoplay=1"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>`;
+}
+
+// Progress bar animation
+function animateProgress() {
+    const progressFill = document.getElementById('progressFill');
+    const progressText = document.getElementById('progressText');
+    let progress = 0;
+    const targetProgress = 75;
+
+    const interval = setInterval(() => {
+        if (progress < targetProgress) {
+            progress += 1;
+            progressFill.style.width = progress + '%';
+            progressText.textContent = progress + '%';
+        } else {
+            clearInterval(interval);
+        }
+    }, 30);
+}
+
+// Fade in animations
+function observeElements() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+    });
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function () {
+    observeElements();
+    setTimeout(animateProgress, 1000);
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+</script>
+    <script src="assets/script.js"></script>
+
+</body>
+
+</html>
