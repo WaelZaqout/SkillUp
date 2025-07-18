@@ -19,7 +19,9 @@ header {
     background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(20px);
     position: fixed;
-    width: 100%;
+    width: 100vw;
+    left: 0;
+    right: 0;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
@@ -1455,5 +1457,97 @@ footer {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/* ===================== */
+/*   Header Responsive   */
+/* ===================== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+@media (max-width: 992px) {
+    nav {
+        padding: 1rem 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        width: 70vw;
+        max-width: 320px;
+        height: 100vh;
+        background: rgba(15,23,42,0.98);
+        box-shadow: -2px 0 20px rgba(0,0,0,0.2);
+        padding: 4rem 2rem 2rem 2rem;
+        gap: 2rem;
+        z-index: 2002;
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+    }
+    .nav-links.open {
+        display: flex;
+        transform: translateX(0);
+    }
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 2vw;
+        top: 1.2rem;
+    }
+    nav {
+        position: relative;
+    }
+    .contact-content {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+    .contact-form, .contact-info {
+        width: 100%;
+        max-width: 100%;
+        padding: 1.2rem !important;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-text h1 {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+    .hero-text p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 1.2rem;
+    }
+    .hero-text {
+        padding: 0.5rem;
+        margin-top: 1.5rem;
+    }
+    .hero-flex {
+        gap: 1rem;
+    }
+    .features-grid, .courses-grid, .teachers-grid, .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .hero {
+        padding-top: 70px; /* أو حسب ارتفاع الهيدر */
     }
 }

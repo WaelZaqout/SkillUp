@@ -48,10 +48,16 @@ window.onclick = function (event) {
 // Add smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const targetSelector = this.getAttribute('href');
+        if (targetSelector && targetSelector !== '#') {
+            const target = document.querySelector(targetSelector);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
     });
 });
 
@@ -66,6 +72,23 @@ window.addEventListener('scroll', function () {
         header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
     }
 });
+
+// زر العودة لأعلى الصفحة
+window.addEventListener('scroll', function() {
+    const btn = document.getElementById('scrollTopBtn');
+    if (btn) {
+        if (window.scrollY > 200) {
+            btn.style.display = 'flex';
+        } else {
+            btn.style.display = 'none';
+        }
+    }
+});
+if (document.getElementById('scrollTopBtn')) {
+    document.getElementById('scrollTopBtn').onclick = function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+}
 
 // Add intersection observer for animations
 const observerOptions = {
@@ -110,3 +133,25 @@ function toggleCurriculum(element) {
     }
 }
 
+// دالة القائمة الجانبية (الهامبرجر)
+window.toggleMenu = function() {
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.getElementById('menu-overlay');
+    if (navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        overlay.style.display = 'none';
+        document.body.style.overflow = '';
+    } else {
+        navLinks.classList.add('open');
+        overlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+};
+// أغلق القائمة عند تغيير حجم الشاشة
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        document.querySelector('.nav-links').classList.remove('open');
+        document.getElementById('menu-overlay').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+});
